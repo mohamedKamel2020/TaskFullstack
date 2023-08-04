@@ -1,0 +1,110 @@
+﻿@model InvoicesSell
+<div class="container"style="margin-top:25px;">
+	<div class="col-12">
+		<form asp-action="SaveCreate">
+			<div class="row" style="margin-left:15%;">
+				<div class="col-md-4 form-group">
+					<input asp-for="DateH" class="form-control" placeholder="DataH"/>
+					<span asp-validation-for="DateH" class="text-danger"></span>
+				</div>
+				<div class="col-md-4 form-group">
+					<input asp-for="DateG" class="form-control" placeholder="DateG"/>
+					<span asp-validation-for="DateH" class="text-danger"></span>
+				</div>
+				<div class="col-md-4 form-group">
+					<input asp-for="InvoiceNo" class="form-control" type="number" placeholder="InvoiceNo"/>
+				</div>
+			</div>
+			<div class="row" style="margin-left:15%; margin-top:20px;">
+				<div class="col-md-4 form-group">
+					<input type="text" asp-for="EName" class="form-control" placeholder="EName"/>
+					<span asp-validation-for="EName" class="text-danger"></span>
+				</div>
+				<div class="col-md-4 form-group">
+					<input asp-for="MainContact1" class="form-control" type="text" placeholder="MainContact1"/>
+					<span asp-validation-for="MainContact1" class="text-danger"></span>
+				</div>
+				<div class="col-md-4 form-group">
+					<input asp-for="AName" class="form-control" type="text" placeholder="AName"/>
+				</div>
+			</div>
+			<div class="row" style="margin-left:15%;margin-top:20px;">
+				<div class="col-md-4 form-group">
+					<input asp-for="InvoiceVatid" class="form-control" type="text" placeholder="InvoiceVatid" />
+
+				</div>
+				<div class="col-md-4 form-group">
+					<input asp-for="ClientVendorNo" class="form-control" type="number" placeholder="ClientVendorNo"/>
+				</div>
+			</div>
+			<table class="table table-bordered" style="margin-top:50px;width:100%;">
+				<thead>
+					<tr>
+						<td>
+							OrderNo
+						</td>
+						<td>
+						    ItemNo
+						</td>
+						<td>
+							UnitNo
+						</td>
+						<td>
+							Price
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input asp-for="OrderNo" placeholder="OrderNo" type="number"/>
+						</td>
+						<td>
+							<input asp-for="ItemNo" placeholder="ItemNo" type="number"/>
+						</td>
+						<td>
+							<input asp-for="UnitNo" placeholder="UnitNo" type="number"/>
+						</td>
+						<td>
+							<input asp-for="Price" placeholder="Price"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-bordered" style="margin-top:50px;width:100%;">
+				<thead>
+					<tr>
+						<td>
+							Quantity
+						</td>
+						<td>
+							Total
+						</td>
+						<td>
+							TotalPlus
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input asp-for="Quantity" placeholder="Quntity" />
+						</td>
+						<td>
+							<input asp-for="Total" placeholder="total" />
+						</td>
+						<td>
+							<input asp-for="TotalPlusTax" placeholder="totalPlus" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br/>
+			<div>
+				<button class="btn btn-success" type="submit">Save</button>
+			</div>
+		</form>
+	</div>
+
+</div>

@@ -1,0 +1,43 @@
+﻿@using Task.BL;
+@model LeftShift
+<div class="container">
+    @using (Html.BeginForm())
+    {
+       <div class="row">
+            <div class="col-1" style="margin-right:2px;margin-top:15px;">@Html.TextBox("input1")</div>
+            <div class="col-1" style="margin-left:100px;margin-top:15px">&lt;&lt;</div>
+            <div class="col-1" style="margin-top:15px;margin-left:-50px;">@Html.TextBox("input2")</div>
+            <input type="submit" value="=" class="col-1 btn btn-info" style="margin-left:115px;margin-top:15px;height:30px;width:30px;" />
+       </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="error">@ViewBag.Error</div>
+    }
+
+    @if (ViewBag.Result != null)
+    {
+        <h3>Result:</h3>
+        <p>Encrypted Input 1: @ViewBag.EncryptedInput1</p>
+        <p>Encrypted Input 2: @ViewBag.EncryptedInput2</p>
+        <p>Result: @ViewBag.Result</p>
+    }
+  
+</div>
+@*<div>
+            <label class="col-form-label" asp-for="Left"></label>
+            <input class="form-control" asp-for="Left" />
+            <span asp-validation-for="Left"></span>
+        </div>
+        <span>&lt;&lt;</span>
+        <div class="mb-2">
+            <label class="col-form-label" asp-for="Right"></label>
+            <input class="form-control" asp-for="Right" />
+            <span asp-validation-for="Right"></span>
+        </div>
+        <input type="submit" value="=" class="btn btn-info" />*@
+@*<div>
+        <label class="col-form-label" asp-for="Result"></label>
+        <input class="form-control" asp-for="Result" readonly />
+    </div>
+*@

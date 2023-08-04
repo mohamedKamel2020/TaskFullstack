@@ -1,0 +1,1271 @@
+﻿@model IEnumerable<NopCommerce.Models.InvoiceSell>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillTypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillTypeSubNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeliveryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeliveryDateH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDelivered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeliveredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeliveredDateH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOutDelivery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceJobStatusNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceStatusNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillToTypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillToBuildingNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsInventory1GaveIt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory1StaffNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsInventory2ReceivedIt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory2StaffNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPostedStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsVoid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPosted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsGlposted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPayments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFastInvoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeposited)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCleared)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountLeftAfterAllBills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CollectedAmountFromOtherBills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsItemOrUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonNo2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsUseInOutInvoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegionNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAccountingForOthers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNoPay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNoShip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNoDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamePay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameShip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNoSecond)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayBillNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManPosted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManGlposted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManVoid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SumPayed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubTotalDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubNetTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubNetTotalPlusTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubLeftQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountCalculated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed01)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed02)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed03)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed04)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed05)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountLeft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountCalculatedPayed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestShipDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentTermsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PricingSchemeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PickedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PackedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCompleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxingSchemeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate1Percentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate2Percentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCalculateTax2OnTax1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate1eName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate2eName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsTax1OnShipping)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsTax2OnShipping)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate1aName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate2aName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateNo2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate1Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRate2Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOneInvoiceUploaded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxRateNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashRegisterNoBuildingNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceVatid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientVendorNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsUploadedToMainBranch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPostedToTransactions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPerDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPerMonth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPerYearQuarter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPerYearHalf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPerYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VattypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VatgroupNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfitMarginTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGPosted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGGlposted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainContact1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainContact2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainContact3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed01VoucherNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed02VoucherNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed03VoucherNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed04VoucherNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed05VoucherNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed01BankAccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed02BankAccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed03BankAccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed04BankAccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed05BankAccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerCashGiven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerCashReturned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceDifferenceFromFirstPriceTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrintNumOfCopies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrintDateG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeftMoneyPaymentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NormalCustomerTypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPrintPartial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardAmountVisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardAmountSpan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DailyBillNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RunningCostAvgDiffrenceWhithPriceTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfitMarginTotalFromAvgCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RunningCostAvgTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyPriceCostPriceTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimaryUnitQuantityTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaperBillNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GazElectricInNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztElectricOutNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsReturnedFullyByReturnInvoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsReturnedFullyByReturnInvoiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeightTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffNo1PersonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffNo2PersonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffNo3PersonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExportImportType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillCreatorAsOf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idcard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillPaperType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentTypes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubNetTotalExecludingTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceMileage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceMakerNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DevicePlate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceSerial1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceSerial2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceNextMileage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceNextServiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceNextServiceDateH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceMakeYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvBillTypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvBuildingNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvInvoiceNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvUserNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculatedPayed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculatedCreditAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculatedDebitAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCreateGlass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentReturnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsHangerOrFold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSpot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFastCleaning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StarchNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlueWeightNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsLost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPaperInvoiceReturned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpoilTypeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainingHourseToBeGiven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainingHourseLeft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztInvoiceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztUniqueInvoiceIdentifier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztInvoiceTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztInvoiceTypeCodeSubType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztLatestDeliveryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztInvoiceHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GaztPreviousInvoiceHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowTimestamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillTypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillTypeSubNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveryDateH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDelivered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveredDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveredDateH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOutDelivery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceJobStatusNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceStatusNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillToTypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillToBuildingNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsInventory1GaveIt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventory1StaffNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsInventory2ReceivedIt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventory2StaffNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPostedStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsVoid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPosted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsGlposted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPayments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFastInvoice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeposited)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCleared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountLeftAfterAllBills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollectedAmountFromOtherBills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsItemOrUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonNo2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUseInOutInvoice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegionNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAccountingForOthers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNoPay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNoShip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNoDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamePay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameShip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNoSecond)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PayBillNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManPosted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManGlposted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManVoid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumPayed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTotalDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubNetTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubNetTotalPlusTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubLeftQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed01)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed02)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed03)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed04)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed05)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountLeft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountCalculatedPayed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestShipDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentTermsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricingSchemeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PickedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxingSchemeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate1Percentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate2Percentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCalculateTax2OnTax1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate1eName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate2eName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsTax1OnShipping)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsTax2OnShipping)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate1aName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate2aName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateNo2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate1Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate2Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOneInvoiceUploaded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRateNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashRegisterNoBuildingNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceVatid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientVendorNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUploadedToMainBranch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPostedToTransactions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPerDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPerMonth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPerYearQuarter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPerYearHalf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPerYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VattypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VatgroupNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfitMarginTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGPosted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGGlposted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainContact1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainContact2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainContact3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed01VoucherNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed02VoucherNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed03VoucherNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed04VoucherNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed05VoucherNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed01BankAccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed02BankAccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed03BankAccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed04BankAccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed05BankAccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerCashGiven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerCashReturned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceDifferenceFromFirstPriceTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrintNumOfCopies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrintDateG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeftMoneyPaymentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NormalCustomerTypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPrintPartial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardAmountVisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardAmountSpan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DailyBillNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RunningCostAvgDiffrenceWhithPriceTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfitMarginTotalFromAvgCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RunningCostAvgTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyPriceCostPriceTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryUnitQuantityTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperBillNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GazElectricInNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztElectricOutNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsReturnedFullyByReturnInvoice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsReturnedFullyByReturnInvoiceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffNo1PersonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffNo2PersonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffNo3PersonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExportImportType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillCreatorAsOf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idcard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillPaperType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentTypes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubNetTotalExecludingTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceMileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceMakerNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevicePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceSerial1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceSerial2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceNextMileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceNextServiceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceNextServiceDateH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceMakeYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvBillTypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvBuildingNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvInvoiceNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvUserNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedPayed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPayed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedCreditAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedDebitAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCreateGlass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentReturnDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsHangerOrFold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSpot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFastCleaning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarchNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlueWeightNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsLost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPaperInvoiceReturned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpoilTypeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingHourseToBeGiven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingHourseLeft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztInvoiceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztUniqueInvoiceIdentifier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztInvoiceTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztInvoiceTypeCodeSubType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztLatestDeliveryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztInvoiceHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GaztPreviousInvoiceHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowTimestamp)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NopCommerce2", "NopCommerce2.csproj", "{C7986BD8-9C4F-47BF-ACAA-3F0FE5BE7E45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7986BD8-9C4F-47BF-ACAA-3F0FE5BE7E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7986BD8-9C4F-47BF-ACAA-3F0FE5BE7E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7986BD8-9C4F-47BF-ACAA-3F0FE5BE7E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7986BD8-9C4F-47BF-ACAA-3F0FE5BE7E45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CEC5254-BD4F-46F0-BBB1-0E5394BACFAA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<NopCommerce1.Models.InvoicesSell>
+<div class="container">
+	<br />
+	<hr style="margin-left:15%;width:70%;" />
+	<br />
+	<p>
+		<button class="btn btn-success" style="margin-left:15%"><a href="/Invoices/Create">Create New + </a></button>
+	</p>
+	<br />
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>
+					Id
+				</td>
+				<td>
+					Invoice No
+				</td>
+				<td>
+					Date G
+				</td>
+				<td>
+					EName
+				</td>
+				<td>
+					Main Contact
+				</td>
+				<td>
+					AName
+				</td>
+				<td>
+					Invoice VATID
+				</td>
+				<td>
+					Client VendorNo
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem=>item.BuildingNo)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.InvoiceNo)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.DateG)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.EName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.MainContact1)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.AName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.InvoiceVatid)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem=>item.ClientVendorNo)
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+
+</div>
